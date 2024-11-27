@@ -8,7 +8,7 @@ urls = [
 
 async function pingUrl(url) {
     try {
-        const response = await axios.get(url);
+        const response = await axios.get(url, {timeout: 5000});
         console.log(`Success: ${url}`);
     } catch (error) {
         console.error(`Error: ${url}`);
