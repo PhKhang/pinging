@@ -2,7 +2,7 @@ name: Node.js Job
 
 on:
   schedule:
-    - cron: '*/14 * * * *'
+    - cron: '*/10 * * * *'
 
 jobs:
   build-and-run:
