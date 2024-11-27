@@ -1,9 +1,17 @@
-var ping = require('ping');
+const axios = require('axios');
 
-var hosts = ['https://flow-socials.onrender.com', 'https://flow-express-js.onrender.com', 'https://sequelize-postgres-exercise-22127182.onrender.com/'];
-hosts.forEach(function(host){
-    ping.sys.probe(host, function(isAlive){
-        var msg = isAlive ? 'host ' + host + ' is alive' : 'host ' + host + ' is dead';
-        console.log(msg);
-    });
-});
+urls = [
+    'https://flow-express-js.onrender.com/',
+    'https://flow-socials.onrender.com',
+    'https://sequelize-postgres-exercise-22127182.onrender.com/'
+];
+
+async function pingUrl(url) {
+    try {
+        const response = await axios.get(url);
+        console.log(`Success: ${url}`);
+    } catch (error) {
+        console.error(`Error: ${url}`);
+    }
+}
+urls.forEach(url => pingUrl(url));
