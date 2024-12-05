@@ -3,7 +3,8 @@ const axios = require('axios');
 urls = [
     'https://flow-express-js.onrender.com/',
     'https://flow-socials.onrender.com',
-    'https://sequelize-postgres-exercise-22127182.onrender.com/'
+    'https://sequelize-postgres-exercise-22127182.onrender.com/',
+    'https://crud-exercise-22127182.onrender.com'
 ];
 
 async function pingUrl(url) {
